@@ -1,4 +1,4 @@
-package twosum_test
+package p0001_test
 
 import (
 	"testing"

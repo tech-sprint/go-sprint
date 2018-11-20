@@ -1,10 +1,10 @@
-package twosum_test
+package p0001_test
 
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/weineel/go-sprint/leetcode/twosum"
+	. "github.com/weineel/go-sprint/leetcode/p0001"
 )
 
 var _ = Describe("TwoSum", func() {
