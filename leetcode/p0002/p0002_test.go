@@ -21,28 +21,25 @@ func MakeList(vals []int) *ListNode {
 }
 
 func PrintList(l *ListNode) {
-	next := l
 	s := ""
 	sep := ""
-	for next != nil {
-		s += sep + strconv.Itoa(next.Val)
+	for l != nil {
+		s += sep + strconv.Itoa(l.Val)
 		sep = "->"
-		next = next.Next
+		l = l.Next
 	}
 	fmt.Println(s)
 }
 
 func CompareList(l1 *ListNode, l2 *ListNode) bool {
-	next1 := l1
-	next2 := l2
-	for next1 != nil && next2 != nil {
-		if next1.Val != next2.Val {
+	for l1 != nil && l2 != nil {
+		if l1.Val != l2.Val {
 			return false
 		}
-		next1 = next1.Next
-		next2 = next2.Next
+		l1 = l1.Next
+		l2 = l2.Next
 	}
-	return next1 == nil && next2 == nil
+	return l1 == nil && l2 == nil
 }
 
 var _ = Describe("P0002", func() {
