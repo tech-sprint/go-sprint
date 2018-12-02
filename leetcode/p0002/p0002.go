@@ -1,10 +1,8 @@
 package p0002
 
-// ListNode Definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import (
+	. "github.com/weineel/go-sprint/kit"
+)
 
 // AddTwoNumbers 2. Add Two Numbers
 func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
