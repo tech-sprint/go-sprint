@@ -1,24 +1,22 @@
 package p00012
 
-import "strings"
-
-func makeTable(romanTokens string) [10]string {
-	rts := strings.Split(romanTokens, "")
+func makeTable(rts string) [10]string {
 	return [10]string{
 		"",
-		rts[0],
-		rts[0] + rts[0],
-		rts[0] + rts[0] + rts[0],
-		rts[0] + rts[1],
-		rts[1],
-		rts[1] + rts[0],
-		rts[1] + rts[0] + rts[0],
-		rts[1] + rts[0] + rts[0] + rts[0],
-		rts[0] + rts[2],
+		rts[0:1],
+		rts[0:1] + rts[0:1],
+		rts[0:1] + rts[0:1] + rts[0:1],
+		rts[0:1] + rts[1:2],
+		rts[1:2],
+		rts[1:2] + rts[0:1],
+		rts[1:2] + rts[0:1] + rts[0:1],
+		rts[1:2] + rts[0:1] + rts[0:1] + rts[0:1],
+		rts[0:1] + rts[2:3],
 	}
 }
 
 // IntToRoman ...
+// 28ms
 func IntToRoman(num int) string {
 	result := ""
 	romanTokensList := [4]string{"IVX", "XLC", "CDM", "M  "}
