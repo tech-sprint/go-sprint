@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main() {
+func StringLean() {
 	fmt.Print("-- 字符串操作包 strings --\n")
 	fmt.Printf("%q\n", strings.Split("a,b,c", ""))
 	fmt.Printf("%d\n", 1993%10)
